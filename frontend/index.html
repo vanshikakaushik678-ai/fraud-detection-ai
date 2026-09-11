@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>AI Fraud Detection Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Fraud Detection System</h1>
+
+<button onclick="toggleMode()">🌙 Toggle Mode</button>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Total Transactions</h3>
+<p id="totalTx">0</p>
+</div>
+
+<div class="card">
+<h3>Fraud Detected</h3>
+<p id="fraudCount">0</p>
+</div>
+
+<div class="card">
+<h3>Safe Transactions</h3>
+<p id="safeCount">0</p>
+</div>
+
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Fraud Detection</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="bg-animation"></div>
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<div class="login-container">
+  <div class="login-card">
+    
+    <h2>🔐 Secure Login</h2>
+    <p class="subtitle">AI Fraud Detection System</p>
+
+    <form id="loginForm">
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <p class="extra-text">
+      Don’t have an account? <a href="signup.html">Sign up</a>
+    </p>
+
+  </div>
+</div>
+
+</body>
+
+
+<!-- RISK METER -->
+
+<div class="card">
+
+<h2>Live Fraud Risk Meter</h2>
+
+<canvas id="riskChart"></canvas>
+
+</div>
+
+
+<!-- TRANSACTION INPUT -->
+
+<div class="card">
+
+<h2>Transaction Check</h2>
+
+<label>Amount</label>
+<input id="amount" type="number" placeholder="Enter amount">
+
+<label>Time (HH:MM)</label>
+<input id="time" type="time">
+
+<label>Device IP</label>
+<input id="device" type="text" placeholder="Detecting IP..." readonly>
+
+<label>City</label>
+
+<select id="location">
+
+<option value="">Select City</option>
+<option value="1">Delhi</option>
+<option value="2">Mumbai</option>
+<option value="3">Bangalore</option>
+<option value="4">Hyderabad</option>
+<option value="5">Lucknow</option>
+<option value="6">Jaipur</option>
+<option value="7">Kolkata</option>
+<option value="8">Chennai</option>
+
+</select>
+
+<button onclick="checkFraud()">Analyze Transaction</button>
+
+<div class="loader" id="loader"></div>
+
+<h3 id="result"></h3>
+
+</div>
+
+
+<!-- IMAGE SCAN -->
+
+<div class="card">
+
+<h2>📸 Scan Payment Screenshot</h2>
+
+<input type="file" id="imageInput">
+
+<button onclick="scanImage()">Scan Image</button>
+
+<pre id="ocrText"></pre>
+
+<h3 id="scanResult"></h3>
+
+</div>
+
+
+<!-- ANALYTICS -->
+
+<div class="card">
+
+<h2>Fraud Analytics</h2>
+
+<canvas id="fraudChart"></canvas>
+
+</div>
+
+
+<!-- HISTORY -->
+
+<div class="card">
+
+<h2>Transaction History</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Amount</th>
+<th>Time</th>
+<th>Device IP</th>
+<th>City</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody id="history"></tbody>
+
+</table>
+
+</div>
+
+
+<!-- MAP -->
+
+<div class="card">
+
+<h2>Fraud Heatmap 🌍</h2>
+
+<div id="map"></div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

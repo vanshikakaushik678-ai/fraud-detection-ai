@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Secure Payment</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h2>💳 Secure Payment Gateway</h2>
+
+</header>
+
+<div class="payment-box">
+
+<h3>Enter Card Details</h3>
+
+<input id="card" placeholder="Card Number">
+
+<input id="name" placeholder="Card Holder Name">
+
+<input id="amount" placeholder="Amount">
+
+<input id="time" placeholder="Transaction Time">
+
+<input id="device" placeholder="Device ID">
+
+<input id="location" placeholder="Location ID">
+
+<button onclick="processPayment()">Pay Now</button>
+
+<div id="paymentLoader"></div>
+
+<h2 id="paymentResult"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
